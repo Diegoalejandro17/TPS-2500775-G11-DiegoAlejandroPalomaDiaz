@@ -4,7 +4,15 @@
 -->
 <html>
     <head>
-
+        <!-- 
+            - dentro de la etiqueta meta usamos modificadores",
+            uno de estos es charset que sirve par el uso de ñ
+            y tildes 
+            - la etiqueta meta es especial solo va <meta />;
+            no necesita etiqueta de cierre 
+            - 
+        -->
+        <meta charset="utf-8" />
         <!-- 
             En el head esta el codigo que no hace parte de lo visual en una pagina web 
             la etiqueta "title" psemos nombrar la pestania del explorador   
@@ -16,11 +24,13 @@
             es de manera prederteminada codigo javascript*/
            
             //la instrucion let declara una variable de alcance local, opcionalmente,puede ser inicializada cin un valor 
-            let nombre = "jaja"
-            alert(nombre)
+            let nombre = ""
             
             nombre = prompt("cual es tu nombre?")
-            alert(nombre)
+            // con el + realizamos concatenacion; entre comillas va texto
+            alert("Bienvenido al mundo de programacion " + nombre)
+            
+
             
         </script>
     </head>
