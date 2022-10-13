@@ -2,40 +2,78 @@
     <head>
         <meta charset="utf-8" />
         <title>MOKEPON!</title>
+        <script src="./js/mokepon.js"></script>
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <h1>MOKEPON! 🔥💧🌱</h1>
-
+        <!-- section representa una seccion de un documento, Sirve para determinar qué contenido corresponde a qué parte de un esquema -->
+        <!--  el id Define un identificador único que debe ser único en todo el documento -->
         <section id="selecionar-mascota">
-            <h2>elige a tu mascota</h2>
+            <h1 class="titulo">Mokepon</h1>
             
-            MASCOTAS
+            <h2 class="subtitulo">elige a tu mascota</h2>
 
-            <button>selecionar</button>
+            <div class="tarjetas">
+                <input type="radio" name="mascota" id="hipodoge" />
+                <label class="tarjeta-de-mokepon" for="hipodoge">
+                    <p>hipodoge</p>
+                    <img src="./assets/hipodoge1-removebg-preview.png" alt="hipodoge">
+                </label>
+                
+                <input type="radio" name="mascota" id="capipepo" />
+                <label class="tarjeta-de-mokepon" for="capipepo">
+                   <p>capipepo</p> 
+                   <img src="./assets/capipepo2-removebg-preview.png" alt="capipepo">
+                </label>
+                
+                <input type="radio" name="mascota" id="ratigueya" />
+                <label class="tarjeta-de-mokepon" for="ratigueya">
+                    <p>ratigueya</p>
+                    <img src="./assets/ratigueya-removebg-preview.png" alt="ratigueya">
+                </label>
+            </div>
+            
+            <!-- el label representa una etiqueta para un elemento en una interfaz de usuario -->
+
+            <button id="boton-mascota">selecionar</button>
         </section>
 
         <section id="selecionar-ataque">
-            <h2>elige a tu atauqe:</h2>
+            <h1 class="titulo">Mokepon</h1>
 
-            <P>tu mascota tiene <span>3</span> vidas</P>
-            <p>las mascota del enemigo tiene <span>3</span> vidas</p>
+            <h2 class="subtitulo">elige a tu ataque</h2>
 
-            <p>
-                <!-- creacion de un boton -->
-                <button>fuego🔥</button>
-                <button>agua 💧</button>
-                <button>tierra 🌱</button>
+            <div class="tarjetas-ataques">
+                <!-- button creacion de un boton -->
+                <button id="boton-fuego" class="boton-de-ataque">fuego🔥</button>
+                <button id="boton-agua" class="boton-de-ataque">agua 💧</button>
+                <button id="boton-tierra" class="boton-de-ataque">tierra 🌱</button>
                 <!-- una buena practica de programacion es colocar los botones en un contenedor, en este caso un <p>
                 -->
-            </p>
-        </section>
-        <section id="mensajes">
-            <p>tu mascota atco con FUEGO, la mascota del enemigo ataco con TIERRA - GANASTE 🎉</p>
-        </section>
+            </div>
 
-        <section id="reiniciar">
-            <button>Reiniciar</button>
-        </section>
-    
+            
+            <div id="mensajes"> 
+                <p id="resultado">mucha suerte</p>
+
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">Reiniciar</button>
+                </section> 
+            </div> 
+
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">3</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">3</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-del-enemigo"></div>
+                </div>
+            </div>
+            <!-- el span sirve para facilitar la manipulacion del dom -->
+        </section>   
     </body>
 </html>
