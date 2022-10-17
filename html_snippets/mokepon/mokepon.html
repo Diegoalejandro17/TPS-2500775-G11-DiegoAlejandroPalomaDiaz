@@ -3,6 +3,7 @@
         <meta charset="utf-8" />
         <title>MOKEPON!</title>      
         <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <!-- section representa una seccion de un documento, Sirve para determinar qué contenido corresponde a qué parte de un esquema -->
@@ -19,6 +20,17 @@
             <!-- el label representa una etiqueta para un elemento en una interfaz de usuario -->
 
             <button id="boton-mascota">selecionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+            <div>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+                <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+            </div>
         </section>
 
         <section id="selecionar-ataque">
